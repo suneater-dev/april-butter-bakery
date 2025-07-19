@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Clock, MapPin, Phone } from 'lucide-react'
+import { Clock, MapPin } from 'lucide-react'
 
 const MenuPage = () => {
   const menuItems = [
@@ -147,7 +147,7 @@ const MenuPage = () => {
                 <Link href="/" className="hover:text-primary-700 transition-colors duration-300">
                   Home
                 </Link>
-                <span className="mx-3">></span>
+                <span className="mx-3">&gt;</span>
                 <span className="text-primary-700">Menu</span>
               </nav>
             </motion.div>

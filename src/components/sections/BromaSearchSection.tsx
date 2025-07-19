@@ -5,10 +5,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Search } from 'lucide-react'
+import SearchOverlay from '@/components/search/SearchOverlay'
 
 const BromaSearchSection = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const categories = [
     {
@@ -86,19 +88,22 @@ const BromaSearchSection = () => {
             </p>
 
             {/* Compact Search Bar */}
-            <form onSubmit={handleSearch} className="max-w-lg mx-auto">
+            <div className="max-w-lg mx-auto">
               <div className="flex gap-4 items-center">
                 <div className="flex-1 relative">
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
+                    onClick={() => setIsSearchOpen(true)}
                     placeholder="Search here"
-                    className="w-full px-6 py-3 text-sm placeholder-neutral-500 focus:outline-none bg-white border border-neutral-200 rounded-full focus:border-neutral-400 transition-colors duration-300 shadow-sm"
+                    className="w-full px-6 py-3 text-sm placeholder-neutral-500 focus:outline-none bg-white border border-neutral-200 rounded-full focus:border-neutral-400 transition-colors duration-300 shadow-sm cursor-pointer"
+                    readOnly
                   />
                 </div>
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={() => setIsSearchOpen(true)}
                   className="px-8 py-3 text-xs font-medium uppercase tracking-[0.1em] text-white rounded-full transition-colors duration-300 flex items-center shadow-sm"
                   style={{ backgroundColor: '#1C1917' }}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0F0F0F'}
@@ -108,7 +113,7 @@ const BromaSearchSection = () => {
                   SEARCH
                 </button>
               </div>
-            </form>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -200,6 +205,12 @@ const BromaSearchSection = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* Search Overlay */}
+      <SearchOverlay 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </>
   )
 }

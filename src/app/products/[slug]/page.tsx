@@ -135,11 +135,11 @@ const ProductPage = ({ params }: ProductPageProps) => {
               <Link href="/" className="hover:text-primary-700 transition-colors duration-300">
                 Home
               </Link>
-              <span className="mx-3">></span>
+              <span className="mx-3">&gt;</span>
               <Link href="/menu" className="hover:text-primary-700 transition-colors duration-300">
                 Menu
               </Link>
-              <span className="mx-3">></span>
+              <span className="mx-3">&gt;</span>
               <span className="text-primary-700">{product.title}</span>
             </nav>
           </div>

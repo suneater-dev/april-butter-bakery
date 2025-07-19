@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X, Instagram, Phone, Mail, Search } from 'lucide-react'
+import SearchOverlay from '@/components/search/SearchOverlay'
 
 const BromaStyleHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const navigationItems = [
     { href: '/menu', label: 'MENU' },
@@ -32,9 +34,10 @@ const BromaStyleHeader = () => {
       label: 'Email' 
     },
     { 
-      href: '/search', 
+      href: '#', 
       icon: Search, 
-      label: 'Search' 
+      label: 'Search',
+      onClick: () => setIsSearchOpen(true)
     },
   ]
 
@@ -70,6 +73,20 @@ const BromaStyleHeader = () => {
           <div className="hidden lg:flex items-center space-x-6">
             {iconItems.map((item) => {
               const IconComponent = item.icon
+              
+              if (item.onClick) {
+                return (
+                  <button
+                    key={item.href}
+                    onClick={item.onClick}
+                    className="text-neutral-700 hover:text-primary-700 transition-colors duration-300"
+                    aria-label={item.label}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </button>
+                )
+              }
+              
               return (
                 <Link
                   key={item.href}
@@ -120,6 +137,23 @@ const BromaStyleHeader = () => {
               <div className="flex items-center space-x-6 pt-4 border-t border-neutral-100">
                 {iconItems.map((item) => {
                   const IconComponent = item.icon
+                  
+                  if (item.onClick) {
+                    return (
+                      <button
+                        key={item.href}
+                        onClick={() => {
+                          item.onClick()
+                          setIsMenuOpen(false)
+                        }}
+                        className="text-neutral-700 hover:text-primary-700 transition-colors duration-300"
+                        aria-label={item.label}
+                      >
+                        <IconComponent className="w-5 h-5" />
+                      </button>
+                    )
+                  }
+                  
                   return (
                     <Link
                       key={item.href}
@@ -138,6 +172,12 @@ const BromaStyleHeader = () => {
           </div>
         )}
       </div>
+      
+      {/* Search Overlay */}
+      <SearchOverlay 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </header>
   )
 }
