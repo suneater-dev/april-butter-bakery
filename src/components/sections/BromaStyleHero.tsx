@@ -47,7 +47,7 @@ const BromaStyleHero = () => {
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
                   <p className="text-lg md:text-xl leading-relaxed text-neutral-700 font-light mb-8">
-                    Baby Loving you feels like home — a soft kind of forever, wrapped in your presence. You're the calm in my chaos, the quiet I never knew I needed. With you, even silence feels full. You're not just in my heart — you are my heart. And every day with you is my favorite part of being alive.
+                    Welcome to April & Butter — a warm embrace in bakery form, where every pastry tells a story of comfort and care. We're the peaceful pause in your busy day, the gentle sweetness you never knew you needed. Here, even simple moments feel special. We're not just in your neighborhood — we are your neighborhood's heart. And every day we get to serve you is our favorite part of what we do.
                   </p>
                 </motion.div>
 

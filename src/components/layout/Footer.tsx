@@ -19,9 +19,7 @@ const Footer = () => {
                   April & Butter
                 </h3>
                 <p className="text-primary-200 leading-relaxed max-w-md">
-                  A cozy bakery where warmth meets elegance in every bite. 
-                  Fresh pastries, wholesome ingredients, and a gentle escape 
-                  from the everyday hustle.
+                  A cozy earth-toned bakery in the heart of Bali, where every detail is crafted with warmth and quiet love. Fresh pastries, wholesome ingredients, and peaceful moments await you daily.
                 </p>
               </div>
               
@@ -30,7 +28,7 @@ const Footer = () => {
                 <p className="text-primary-300 font-medium">Follow our journey</p>
                 <div className="flex space-x-4">
                   <a
-                    href="https://instagram.com/aprilandbutter"
+                    href="https://instagram.com/aprilnbutter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-primary-200 hover:text-white transition-colors duration-300 group"
@@ -38,7 +36,7 @@ const Footer = () => {
                     <div className="w-10 h-10 bg-primary-700 rounded-full flex items-center justify-center group-hover:bg-primary-600 transition-colors duration-300">
                       <Instagram className="w-5 h-5" />
                     </div>
-                    <span className="text-sm">@aprilandbutter</span>
+                    <span className="text-sm">@aprilnbutter</span>
                   </a>
                 </div>
               </div>
@@ -83,9 +81,9 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-primary-300 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="leading-relaxed">
-                      425 Maple Street<br />
-                      Riverside District<br />
-                      Portland, OR 97205
+                      1604 Bali Indonesia<br />
+                      Heart of Bali Community<br />
+                      Tropical Paradise District
                     </p>
                   </div>
                 </div>
@@ -132,9 +130,9 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-primary-300">
               <p>© {currentYear} April & Butter Bakery. All rights reserved.</p>
               <div className="flex space-x-4">
-                <span>Portland, Oregon</span>
+                <span>Bali, Indonesia</span>
                 <span>•</span>
-                <span>Riverside District</span>
+                <span>Tropical Paradise District</span>
               </div>
             </div>
 
