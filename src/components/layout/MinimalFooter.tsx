@@ -16,7 +16,7 @@ const MinimalFooter = () => {
               APRIL & BUTTER
             </h3>
             <p className="text-neutral-400 font-light leading-relaxed max-w-sm text-sm">
-              Baby you are the most beautiful and amazing person that I ever know and I'm grateful that you are mine.
+              A cozy earth-toned bakery in Bali where every pastry is crafted with care and quiet love. Fresh ingredients, warm hospitality, and peaceful moments await you daily.
             </p>
           </div>
 
